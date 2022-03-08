@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %>
+  <body>
+    <%- include('./partials/header') %>
+    <main>
+      <section>
+        <div class="section_title">
+          <h2>
+            Fale Conosco!
+            <img src="/images/icons/qa.svg" alt="Imagem de Quest and Answer" />
+          </h2>
+        </div>
+        <div class="container formCont">
+          <form class="suportForm">
+            <label for="nome">Nome e Sobrenome</label>
+            <input
+              type="text"
+              name="nome"
+              id="nome"
+              class="inputText"
+              required
+            />
+
+            <label for="tag">Minha mensagem é sobre... (selecione a tag)</label>
+            <select name="tag" id="tag" class="inputText" required>
+              <option>Conta</option>
+              <option>Filme</option>
+              <option>Perfil</option>
+            </select>
+
+            <label for="assunto">Assunto</label>
+            <input
+              type="text"
+              name="assunto"
+              id="assunto"
+              class="inputText"
+              required
+            />
+
+            <label for="msg">Mensagem</label>
+            <textarea
+              placeholder="Be nice!"
+              type="textarea"
+              name="msg"
+              id="msg"
+              rows="5"
+              class="inputText"
+              required
+            ></textarea>
+          </form>
+          <div>
+            <img src="/images/3dQa.png" alt="" />
+          </div>
+        </div>
+        <p class="disclaimer">
+          Respostas em até 2 dias úteis. Horário da quipe de suporte: segunda a
+          sexta, 09:00 as 18:00.
+        </p>
+      </section>
+    </main>
+    <%- include('./partials/footer') %>
+  </body>
+</html>
