@@ -1,0 +1,52 @@
+.formulario__cadastro {
+  background: rgba(196, 196, 196, 0.1);
+  border-radius: 0.5rem;
+  height: 46rem;
+  padding: 1rem;
+  width: 32rem;
+  margin-top: 2rem;
+}
+
+.cadastro {
+  padding: 0 0 2rem 1rem;
+}
+
+.input__cadastro {
+  background-color: #484848cc;
+  width: 29rem;
+  height: 1.767rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.input__nascimento {
+  background-color: #484848cc;
+  color: #f5f4f3;
+  width: 10rem;
+  height: 1.767rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.select__genero {
+  background-color: #484848cc;
+  color: #f5f4f3;
+  width: 10rem;
+  height: 1.767rem;
+  border: none;
+  border-radius: 0.313rem;
+}
+
+.buttom_cadastro {
+  display: flex;
+  justify-content: center;
+}
+
+.btn__cadastro {
+  width: 8.836rem;
+  height: 2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #8e0e00;
+  color: #f5f4f3;
+}

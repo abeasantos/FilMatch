@@ -1,0 +1,19 @@
+.main__criar__sessao{
+    display: flex;
+    justify-content: center;
+}
+
+.criar__sessao{
+    background: rgba(196, 196, 196, 0.1);
+    height: 48.7rem ;
+    padding-left: 2rem;
+    width: 42rem;
+}
+
+.linha__horizontal{
+    color: white;
+    height: 3px;
+    margin-top: 2rem;
+    width: 38rem;
+}
+

@@ -1,0 +1,8 @@
+.main__forum {
+  display: flex;
+  min-height: calc(100vh - 9.9rem);
+  justify-content: center
+}
+
+
+

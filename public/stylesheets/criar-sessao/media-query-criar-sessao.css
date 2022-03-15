@@ -1,0 +1,25 @@
+@media screen and (max-width: 480px){
+    .main__criar__sessao{
+        height: 59rem;
+    }
+
+    .criar__sessao{
+        width: 28rem;
+        height: 50rem;
+    }
+    .input__titulo{
+        width: 25rem;
+    }
+
+    .input__descricao{
+        width: 25rem;
+    }
+
+    .input__horario{
+        width: 7rem;
+    }
+
+    .botao__criar_sessao{
+        margin-left: 6rem;
+    }
+}
