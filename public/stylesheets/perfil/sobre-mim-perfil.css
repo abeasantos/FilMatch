@@ -1,0 +1,51 @@
+.sobreMim__Perfil{
+    border-radius: 5px;
+    background: rgba(196, 196, 196, 0.1);
+    height: 38rem;
+    margin-top: 1.8rem;
+    padding: 1rem;
+    width: 25rem ; 
+ }
+ 
+ .input__sobre{
+     background-color: #484848;
+     border: none;
+     border-radius: 5px;
+     color: #f5f4f3;
+     height: 7rem;
+     width: 22rem;
+ }
+ 
+ .input__ocupacao{
+     background-color: #484848;
+     border: none;
+     border-radius: 5px;
+     color: #f5f4f3;
+     height: 3.7rem;
+     width: 22rem;
+ }
+ 
+ .input__interesses{
+     background-color: #484848;
+     border: none;
+     border-radius: 5px;
+     color: #f5f4f3;
+     height: 3.7rem;
+     width: 22rem;
+ }
+ 
+ .input__filme{
+     background-color: #484848;
+     border: none;
+     border-radius: 5px;
+     color: #f5f4f3;
+     height: 1.3rem;
+     width: 22rem;
+ }
+ 
+ .input__aniversario{
+     background-color: #484848;
+     border: none;
+     border-radius: 5px;
+     color: #f5f4f3;
+ }
