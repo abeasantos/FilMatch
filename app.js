@@ -14,6 +14,7 @@ var resultadoFilmeRouter = require('./routes/resultadoFilme')
 var homeForum = require('./routes/homeForum')
 var criarSessao = require('./routes/criarSessao')
 var perfil = require ('./routes/perfil')
+var perfilUsuario = require('./routes/perfilUsuario')
 
 
 var app = express();
@@ -38,6 +39,7 @@ app.use('/suporte', suporteRouter);
 app.use('/movies', moviesRouter);
 app.use('/sobrenos', sobrenosRouter);
 app.use('/perfil' , perfil)
+app.use('/perfilusuario', perfilUsuario)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

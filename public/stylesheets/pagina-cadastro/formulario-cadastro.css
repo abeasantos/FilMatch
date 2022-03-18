@@ -1,10 +1,10 @@
 .formulario__cadastro {
   background: rgba(196, 196, 196, 0.1);
   border-radius: 0.5rem;
-  height: 46rem;
+  height: 55rem;
   padding: 1rem;
   width: 32rem;
-  margin-top: 2rem;
+  margin-top: 7.5rem;
 }
 
 .cadastro {
@@ -17,6 +17,8 @@
   height: 1.767rem;
   border: none;
   border-radius: 5px;
+  color: white;
+  margin-bottom: 20px;
 }
 
 .input__nascimento {
@@ -26,15 +28,16 @@
   height: 1.767rem;
   border: none;
   border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .select__genero {
   background-color: #484848cc;
   color: #f5f4f3;
   width: 10rem;
-  height: 1.767rem;
+  height: 1.7rem;
   border: none;
-  border-radius: 0.313rem;
+  border-radius: 0.3rem;
 }
 
 .buttom_cadastro {
@@ -43,10 +46,16 @@
 }
 
 .btn__cadastro {
-  width: 8.836rem;
+  width: 8.8rem;
   height: 2rem;
   border: none;
   border-radius: 10px;
   background-color: #8e0e00;
   color: #f5f4f3;
+}
+
+.btn__cadastro:hover{
+  background-color: var(--white-light);
+  color: var(--main-light);
+  opacity: 0.8;
 }

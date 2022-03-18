@@ -1,5 +1,8 @@
 @media screen and (max-width: 480px){
     
+    .main__forum{
+      height: 80rem;
+    }
     .mensagens__forum{
         width: 24rem;
       }

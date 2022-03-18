@@ -1,0 +1,44 @@
+<%-include('./partials/head')%>
+
+<body>
+    <%-include('./partials/header')%>
+    <main class="main__painel__usuario">
+        <div class="configuracoes">
+            <p><strong>Configuraçoes</strong></p>
+            <a class="link__config" href=""><p>Geral</p></a>
+            <a class="link__config" href=""><p>Editar Perfil</p></a>
+            <a class="link__config" href=""><p>Seus Dados</p></a>
+            <a class="link__config" href=""> <p>Chamadas do Suporte</p></a>
+            <a class="link__config" href=""><p>Privacidade</p></a>
+            <a class="link__config" href=""><p>Sessoes Criadas</p></a>
+            <a class="link__config" href=""><p>Convidar amigos</p></a>
+        </div>
+        <div class="editar__configuracoes">
+            <p>Configuração geral da sua conta</p>
+            <form action="">
+                <div class="opcoes__configuracoes">
+                <div class="input__dados">
+                    <label for="">Nome</label>
+                    <input class="input__config" type="text">
+                </div>
+                <div class="input__dados">
+                    <label for="">E-mail</label>
+                    <input class="input__config" type="text">
+                </div>
+                <div class="input__dados">
+                    <label for="">Nickname</label>
+                    <input class="input__config" type="text">
+                </div>
+                <div class="input__dados">
+                    <label for="">Senha</label>
+                    <input class="input__config" type="password">
+                </div>
+                <div class="button__salvar__config">
+                    <button class="button__config">Salvar Informações</button>
+                </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <%-include('./partials/footer')%>
+</body>
