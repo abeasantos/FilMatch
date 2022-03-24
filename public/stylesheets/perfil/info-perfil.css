@@ -1,0 +1,47 @@
+.info__perfil{
+    align-items: flex-end;
+    background-image: url('/images/imagens-perfil/Frame\ 22.svg');
+    display: flex;
+    height: 15rem;
+    justify-content: space-around;
+    width: 100vh;
+}
+
+.img__perfil{
+    height: 6.5rem;
+    width: 6.5rem;
+}
+
+.background__info{
+    background: rgba(58, 52, 52, 0.5);
+    border-radius: 5px;
+    height: fit-content;
+    padding: 0.3rem;
+    width: fit-content;
+}
+
+.seguidores__perfil{
+    align-items: center;
+    background:#2C2C2C; 
+    border-radius: 5px;
+    display: flex;
+    height: 3.7rem ;
+    justify-content: space-around;
+    width: 100vh;
+}
+
+.botao__perfil{
+    background-color: #8E0E00;
+    border: none;
+    border-radius: 5px;
+    color: #f5f4f3;
+    height:1.4rem;
+    margin-bottom: 16px;
+    width: 3.3rem;
+}
+
+.botao__perfil:hover {
+    background-color: var(--white-light);
+    color: var(--main-light);
+    opacity: 0.8;
+}

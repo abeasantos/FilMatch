@@ -1,0 +1,48 @@
+<%-include('./partials/head')%>
+
+<%-include('./partials/header')%>
+  <body>
+    <main class="mainCadastro">
+      <section class="section__cadastro">
+        <div class="apresentacao">
+          <h3 class="apresentacao__titulo">Seu serviço de  filmes favorito com os seus melhores amigos.</h3>
+          <p class="apresentacao__descricao">Filmatch foi pensado para criar novas amizades atraves de filmes, encontre ou crie uma  sessão de um filme que voce gosta, seja ele qual for, escolha sua plataforma de streaming preferida e assista filmes com novos e antigos amigos simultaneamente.</p>
+        </div>
+        <div class="apresentacao__img">
+          <img class="poster" src="/images/imagens-pagina-de-cadastro/posterLaranjaMecanica.svg" alt="Poster Laranja Mecanica" >
+          <img class="poster" src="/images/imagens-pagina-de-cadastro/Poster Odisseia Francesa (1).svg" alt="poster odisseia francesa" >
+        </div>
+      </section>
+      <section class="formulario__cadastro">
+        <form>
+          <div class="cadastro">
+            <strong><p>Cadastro</p></strong>
+            <p>Ja possui conta? <strong><a href="#" style='text-decoration: none' >Clique aqui</a></strong></p>
+            <p class="form">Nome</p>
+            <input class="input__cadastro" type="text" name="nome" id="nome">
+            <p>Email</p>
+            <input class="input__cadastro" type="email" name="email" id="email">
+            <p>Senha</p>
+            <input class="input__cadastro" type="password" name="senha" id="senha">
+            <p>Confirme Sua Senha</p>
+            <input class="input__cadastro" type="password" name="confirmarSenha" id="confirmarSenha">
+            <label for="dataDeNascimento"><p>Data De Nascimento</p></label>
+            <input class="input__nascimento" type="date" name="dataDeNascimento" id="dataDeNascimento">
+            <label for="gerero"><p>Gênero</p></label>
+            <select class="select__genero">
+              <option selected disabled value="">Selecione</option>
+                  <option>Cisgênero</option>
+                  <option>Transgênero</option>
+                  <option>Não-binário</option>
+            </select>
+          <p >Ao clicar em “Criar Conta”, eu aceito que li e aceitei os <strong><a  href="#">Termos de Uso e Políticas de Privacidade</a></strong>.</p>
+          <div class="buttom_cadastro">
+            <button class="btn__cadastro" type="submit">Criar conta</button>
+          </div>
+        </div>
+          </form>
+        </section>
+    </main>
+    <%-include('./partials/footer')%>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+.botao__adicionar{
+    background-color: #8e0e00;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    height: 1.5rem ;
+    margin-top: 2rem;
+    width: 6rem;
+}
+
+.botao__adicionar:hover{
+    background-color: var(--white-light);
+    color: var(--main-light);
+    opacity: 0.8;
+}
+
+.botao__criar_sessao {
+    background-color: #8e0e00;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    height:2.5rem;
+    margin-left: 12rem;
+    margin-top: 1rem;
+    width: 13rem;
+}
+
+.img_usuarios{
+    display: flex;
+    justify-content: space-evenly;
+}

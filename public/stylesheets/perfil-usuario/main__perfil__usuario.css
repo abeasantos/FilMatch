@@ -1,0 +1,36 @@
+.main__painel__usuario{
+    align-items: center;
+    display: flex;
+    height: 87vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+@media screen and (max-width: 480px){
+    .configuracoes{
+        display: contents;
+    }
+
+    .link__config p{
+        display: none;
+    }
+
+    .main__painel__usuario{
+        flex-direction: column;
+    }
+    .editar__configuracoes{
+        height: 40rem !important;
+        margin-bottom: 6.1rem;
+        width: 43vh !important;
+    }
+    .input__config{
+        width: 20rem !important;
+    }
+
+    .button__salvar__config{
+        padding-top: 0 !important;
+    }
+}
+
+
+

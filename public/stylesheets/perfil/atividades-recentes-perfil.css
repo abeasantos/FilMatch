@@ -1,0 +1,9 @@
+.atividades__recentes{
+    border-radius: 5px;
+    background: rgba(196, 196, 196, 0.1);
+    height: 38rem;
+    margin-left: 9.3rem;
+    margin-top: 1.8rem;
+    padding: 1rem; 
+    width: 30rem;
+}

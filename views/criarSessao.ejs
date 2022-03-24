@@ -1,0 +1,68 @@
+<%-include('./partials/head')%>
+
+<body>
+  <%-include('./partials/header')%>
+  <main class="main__criar__sessao">
+    <section class="criar__sessao" >
+      <h2>Crie uma sessão</h2>
+      <form action="">
+        <p>Titulo da sessão</p>
+        <div>
+          <input class="input__titulo"  type="text" value="Titulo do filme" />
+        </div>
+        <p>Descrição</p>
+        <div><input class="input__descricao" type="text" name="" /></div>
+        <div class="input__data">
+          <div>
+            <p>Data</p>
+            <input class="input__horario" type="date" />
+          </div>
+         <div>
+          <p>Horário</p>
+          <input class="input__horario" type="time" />
+         </div>
+          <div>
+            <p>Duração</p>
+            <input class="input__horario" type="time" /> 
+          </div>
+        </div>
+        <p>Local</p>
+        <div><input class="input__titulo"  type="text" value="Link para o Discord"/></div>
+        <div class="linha__horizontal"></div>
+        <p>Convidados</p>
+        <div>
+          <input
+          class="input__titulo" 
+            type="email"
+            value="E-mail dos convidados"
+          />
+          <button class="botao__adicionar" type="submit">
+            <strong>Adicionar</strong>
+          </button>
+        </div>
+        <div class="img_usuarios">
+          <img
+            src="/images/Imagens-criacao-de-sessao/usuarioSessao.svg"
+            alt="icone usuario"
+          />
+          <img
+            src="/images/Imagens-criacao-de-sessao/usuarioSessao.svg"
+            alt="icone usuario"
+          />
+          <img
+            src="/images/Imagens-criacao-de-sessao/usuarioSessao.svg"
+            alt="icone usuario"
+          />
+          <img
+            src="/images/Imagens-criacao-de-sessao/usuarioSessao.svg"
+            alt="icone usuario"
+          />
+        </div>
+        <button class="botao__criar_sessao" type="submit">
+          <strong>Criar sessão</strong>
+        </button>
+      </form>
+    </section>
+  </main>
+  <%-include('./partials/footer')%>
+</body>

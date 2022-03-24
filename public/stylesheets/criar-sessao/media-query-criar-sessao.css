@@ -1,0 +1,16 @@
+@media screen and (max-width: 480px){
+    .main__criar__sessao{
+        display: flex;
+        height: 70rem;
+    }
+    
+    .criar__sessao{
+        width: 25rem;
+        flex-direction: column;
+    }
+
+    .input__titulo{
+        width: 25rem !important;
+    }
+
+}
