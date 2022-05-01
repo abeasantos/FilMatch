@@ -28,19 +28,19 @@ module.exports = (sequelize, DataTypes) => {
         },
         bio:{
             type:DataTypes.STRING,
-            allowNull:false
+            //allowNull:false
         },
         ocupacao:{
             type:DataTypes.STRING,
-            allowNull:false
+            //allowNull:false
         },
         hobbies:{
             type:DataTypes.STRING,
-            allowNull:false
+            //allowNull:false
         },
         filmePref:{
             type:DataTypes.STRING,
-            allowNull:false
+            //allowNull:false
         }
 
     },{

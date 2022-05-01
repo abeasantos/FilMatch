@@ -28,7 +28,11 @@ module.exports = (sequelize, DataTypes) => {
         facha_etaria:{
             type:DataTypes.STRING,
             allowNull:false
-        }
+        },
+        genero_id: {
+             type: DataTypes.INTEGER,
+             allowNull: true
+}
     },{
         tableName:'filme',
         timestamps:false

@@ -3,6 +3,9 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const session = require('express-session')
+const logMiddleware = require('./middlewares/logSite')
+const bodyParser = require('body-parser')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -16,6 +19,8 @@ var criarSessao = require('./routes/criarSessao')
 var perfil = require ('./routes/perfil')
 var perfilUsuario = require('./routes/perfilUsuario')
 var resultadoBusca = require('./routes/resultadoBusca')
+var login = require ('./routes/login')
+
 
 
 var app = express();
@@ -29,6 +34,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(cookieParser())
+
 
 app.use('/', cadastroRouter)
 app.use('/users', usersRouter)
@@ -42,6 +49,27 @@ app.use('/sobrenos', sobrenosRouter);
 app.use('/perfil' , perfil)
 app.use('/perfilusuario', perfilUsuario)
 app.use('/resultadobusca', resultadoBusca)
+app.use('/login', login)
+
+
+// body-parser config
+
+app.use(bodyParser.urlencoded({ extended : false}))
+
+app.use(bodyParser.json())
+
+
+// habilitando sessions
+
+
+app.use(session({
+	secret: 'filmatch',
+
+	resave: false,
+
+	saveUninitialized: true, 
+
+}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

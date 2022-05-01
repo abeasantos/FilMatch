@@ -29,12 +29,7 @@ module.exports = (sequelize, DataTypes) => {
         Mensagem.belongsTo(models.Topico,{
             foreignKey:"topico_id",
             as:"topico"
-        })
-
-    Mensagem.hasMany(models.Usuario, {
-        foreignKey:"mensagem_id",
-        as: "usuarios"
-    })
+        }) 
 }
     return Mensagem
 }
