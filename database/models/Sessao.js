@@ -26,10 +26,10 @@ module.exports = (sequelize, DataTypes) => {
           as: "filme"
         }) 
 
-    Sessao.hasMany(models.Usuario, {
-        foreignKey:"usuario_id",
-        as: "usuarios"
-    })
-} 
+    // Sessao.belongsToMany(models.Usuario, {
+    //     foreignKey:"usuario_id",
+    //     as: "usuarios"
+    // })
+}
     return Sessao
 }

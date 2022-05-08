@@ -16,7 +16,7 @@ module.exports = {
         allowNull: false
       },
       senha: {
-        type: Sequelize.STRING(11),
+        type: Sequelize.STRING(60),
         allowNull: false
       },
       nasc: {
