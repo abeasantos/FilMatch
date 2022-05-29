@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         timestamps:false
     })
 
-    Genero.associate = (models) => {
+    /*Genero.associate = (models) => {
         Genero.belongsTo(models.Filme, {
           foreignKey: "filme_id",
           as: "filme"
@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     Genero.hasMany(models.Filme, {
         foreignKey:"genero_id",
         as: "filmes"
-    })
-} 
+    })*/
     return Genero
-}
+} 
+   

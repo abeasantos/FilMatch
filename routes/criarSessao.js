@@ -1,9 +1,11 @@
 var express = require('express')
 var router = express.Router()
+let CriarSessaoController = require ('../controllers/criarSessaoController')
 
-/* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('criarSessao')
-})
+
+router.get('/' , CriarSessaoController.findAll) ;
+
+router.post('/criar', CriarSessaoController.create )
+
 
 module.exports = router

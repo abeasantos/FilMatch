@@ -17,19 +17,6 @@ module.exports = (sequelize, DataTypes) => {
         timestamps:false
     })
 
-    Topico.associate = (models) => {
-        Topico.belongsTo(models.Forum, {
-          foreignKey: "forum_id",
-          as: "forum"
-        }),
-        Topico.belongsTo(models.Usuario, {
-            foreignKey: "usuario_id",
-            as: "usuario"
-        }),
-    Topico.hasMany(models.Mensagem, {
-        foreignKey:"mensagem_id",
-        as: "mensagens" 
-    })
-} 
     return Topico
-}
+} 
+   

@@ -1,5 +1,5 @@
 .mainCadastro {
   display: flex;
-  min-height: 58rem;
+  min-height: 50rem;
   justify-content: space-around;
 }

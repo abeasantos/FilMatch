@@ -5,11 +5,11 @@
   <main class="main__resultado">
       <div class="poster__resultado">
         <img
-          src="/images/imagens-resultado-filmes/posterArcane.svg"
-          alt="poster arcane"
+          src= "" width="285px" height="352px"
+          alt=""
         />
         <div >
-          <p><strong>Arcane</strong></p>
+          <p><strong><%= filmes[filmeID].nome %> </strong></p>
         </div>
         <img
           src="/images/imagens-resultado-filmes/avaliacao-4.5.svg"
@@ -21,31 +21,28 @@
         <div class="sinopse">
           <p ><strong >Sinopse</strong></p>
           <p>
-            Em meio ao conflito entre as cidades-gêmeas de Piltover e Zaun, duas
-            irmãs lutam em lados opostos de uma guerra entre tecnologias mágicas
-            e convicções incompatíveis.
+            <%= filmes[filmeID].descricao  %> 
           </p>
             <p>Disponível em:</p>
-            <img src="/images/imagens-resultado-filmes/netflix 1.svg" alt=""></div>
-        <p class="info__filme">2021 • Fantasia Científica • 1 Temporada</p>
+            <p> <%= filmes[filmeID].streaming  %> </p>
+        </div>
+        <p class="info__filme"> Genero : <%= filmes[filmeID].genero %>  </p>
         <div class="proximas__sessoes">
-          <p class="horario__sessoes"><strong>Próximas sessões de “Arcane”</strong></p>
+          <p class="horario__sessoes"><strong>Próxima sessão de <%= filmes[filmeID].nome %> </strong></p>
           <div class="proxima__sessao" >
-            <p>Arcane</p>
-            <p>00:00 00/00</p>
+            <p><%= filmes[filmeID].nome %></p>
+            <p><%= sessoes[filmeID].data %></p>
+            <p><%= sessoes[filmeID].horario %></p>
           </div>
-          <div class="proxima__sessao" >
-            <p>Arcane</p>
-            <p>00:00 00/00</p>
-          </div>
-          <button class="botao__sessoes">Criar uma nova sessão</button>
+
+          <a href="/criarSessao"><button class="botao__sessoes">Criar uma nova sessão</button></a>
         </div>
        </div>
       </div>
       <div class="linha__vertical"></div>
     <section class="forum__resultado" >
       <p>
-        <strong>Ultimas atividades no Fórum sobre: “Arcane”</strong>
+        <strong>Ultimas atividades no Fórum sobre: <%= filmes[filmeID].nome %></strong>
       </p>
       <div class="atividades__forum" >
         <img

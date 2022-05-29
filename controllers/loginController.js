@@ -6,11 +6,10 @@ const loginController = {
     user: async(req,res) =>{
         const {email, senha} = req.body
         const usuario = await Usuario.findOne({
-            atributes: ['email', 'senha'],
             where: {
                 email: email,
             }
-        })
+        }).then(result => result.dataValues)
         console.log(req.body)
         console.log(usuario.senha)
         console.log(bcrypt.compareSync(senha, usuario.senha))
@@ -25,6 +24,9 @@ const loginController = {
             return res.render('login', {erro:'Email e/ou senha estão incorretos. Tente novamente'})
         }
 
+        req.session.usuario = {
+            ...usuario, senha:null
+        }
 
         res.redirect('/movies')
     }

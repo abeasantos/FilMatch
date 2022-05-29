@@ -3,11 +3,13 @@
     border-radius: 0.3rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     font-size: 1.5rem;
-    height: 50rem;
+    height: 46rem;
     line-height: 1.9rem;
     padding: 3rem;
     width: 52rem;
+    align-items: center;
 }
 
 .opcoes__configuracoes{
@@ -19,10 +21,9 @@
     margin-bottom: 1.8rem;
 }
 .input__config{
-    background-color: #2d2d2d;
+
     border: none;
     border-radius: 0.3rem;
-    color: white;
     display: flex;
     height: 1.5rem;
     margin-top: 1.2rem;
@@ -50,5 +51,18 @@
 .button__salvar__config{
     display: flex;
     justify-content: center;
-    padding-top: 5rem;
+}
+
+.chamada__suporte{
+    background: rgba(196, 196, 196, 0.1);
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1.5rem;
+    height: 46rem;
+    line-height: 1.9rem;
+    padding: 3rem;
+    width: 52rem;
+    align-items: center;
 }

@@ -1,11 +1,11 @@
 module.exports = (sequelize, DataTypes) => {
-    const Mensagem = sequelize.define('Mensagem',{
+    const Mensagem = sequelize.define('Mensagems',{
         id:{
             type:DataTypes.INTEGER,
             primaryKey:true,
             autoIncrement:true
         },
-        titulo:{
+        nome:{
             type:DataTypes.STRING,
             allowNull:false
         },
@@ -16,20 +16,11 @@ module.exports = (sequelize, DataTypes) => {
         data:{
         type:DataTypes.DATE,
         allowNull:false
-        },
-        tableName:'mensagem',
+        }
+    },{
+        tableName:'mensagems',
         timestamps:false
     })
-
-    Mensagem.associate = (models) => {
-        Mensagem.belongsTo(models.Usuario, {
-          foreignKey: "usuario_id",
-          as: "usuario" 
-        }),
-        Mensagem.belongsTo(models.Topico,{
-            foreignKey:"topico_id",
-            as:"topico"
-        })
-}
     return Mensagem
 }
+    

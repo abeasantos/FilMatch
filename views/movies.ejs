@@ -5,7 +5,7 @@
   <body>
     <%- include('./partials/header') %>
 
-    <main>
+    <main class="main__top__movies">
       <section>
         <div class="section_title">
           <h2>
@@ -16,44 +16,55 @@
         <div class="container">
           <div class="top_movies">
             <div class="movie_item">
-              <img src="/images/posters/forrestGump.jpg" alt="Forrest Gump" />
-              <div class="title_movie">
-                <p>Forrest Gump</p>
+              <a href="http://localhost:3000/resultadofilme/4">
+                <img src="https://www.magazine-hd.com/apps/wp/wp-content/uploads/2022/04/doutor-estranho-2-poster.jpg" alt="doutor-estranho-2-poster" />
+                <div >
+                  <p class="title_movie">
+                    Doutor Estranho no Multiverso da Loucura
+                  </p></a>
               </div>
             </div>
 
             <div class="movie_item">
+             <a href="http://localhost:3000/resultadofilme/9">
               <img
-                src="/images/posters/hpDh2.jpg"
-                alt="Harry Potter e As Reliquias da morte pt 2"
+              src="https://portalpopline.com.br/wp-content/uploads/2022/02/morbius-nova-lenda-marvel.jpg"
+              alt="morbius-nova-lenda-marvel"
+            />
+            <div>
+              <p class="title_movie">Morbius</p>
+            </div>
+             </a>
+            </div>
+
+            <div class="movie_item">
+              <a href="http://localhost:3000/resultadofilme/0">
+                <img src='https://assets-prd.ignimgs.com/2022/01/13/uncharted-poster-full-1642086040683.jpg'   alt="uncharted-poster-full-1642086040683" />
+              <div class="title_movie">
+                <p>Uncharted</p>
+              </div>
+              </a>
+            </div>
+
+            <div class="movie_item">
+            <a href="http://localhost:3000/resultadofilme/1">
+              <img src="https://johto.legiaodosherois.com.br/wp-content/uploads/2020/11/legiao_U6yGmuMOotvg.jpg" alt="Thor" />
+              <div class="title_movie">
+                <p>Thor Amor e Trovão</p>
+              </div>
+            </a>
+            </div>
+
+            <div class="movie_item">
+              <a href="http://localhost:3000/resultadofilme/2">
+                <img
+                src="https://asset.vg247.com/sonic-2-poster.jpg/BROK/resize/1920x1920%3E/format/jpg/quality/80/sonic-2-poster.jpg"
+                alt="Sonic-2"
               />
-              <div>
-                <p class="title-movie">Harry Potter e As Reliquias da morte pt 2</p>
-              </div>
-            </div>
-
-            <div class="movie_item">
-              <img src="/images/posters/spiderMan.jpg" alt="Homem Haranha" />
               <div class="title_movie">
-                <p>Homem Haranha</p>
+                <p>Sonic 2</p>
               </div>
-            </div>
-
-            <div class="movie_item">
-              <img src="/images/posters/starWars.jpg" alt="Star Wars" />
-              <div class="title_movie">
-                <p>Star Wars</p>
-              </div>
-            </div>
-
-            <div class="movie_item">
-              <img
-                src="/images/posters/captainAmerica.jpg"
-                alt="Capitão América"
-              />
-              <div class="title_movie">
-                <p>Capitão América</p>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -74,45 +85,45 @@
           <div class="next_session">
               <div class="session">
                 <div>
-                  <p>Filme</p>
-                  <p>00:00</p>
+                  <p> <%= sessoes[1].nome %>  </p>
+                  <p><%= sessoes[1].horario %> Hrs</p>
                 </div>
                 <div>
                   <a href="#" class="btn">Juntar-se</a>
-                  <p>00/00</p>
+                  <p> Data <%= sessoes[1].data %></p>
                 </div>
               </div>
 
               <div class="session">
                 <div>
-                  <p>Filme</p>
-                  <p>00:00</p>
+                  <p><%= sessoes[2].nome %></p>
+                  <p><%= sessoes[2].horario %> Hrs</p>
                 </div>
                 <div>
                   <a href="#" class="btn">Juntar-se</a>
-                  <p>00/00</p>
+                  <p>Data <%= sessoes[2].data %></p>
                 </div>
               </div>
 
               <div class="session">
                 <div>
-                  <p>Filme</p>
-                  <p>00:00</p>
+                  <p><%= sessoes[3].nome %></p>
+                  <p><%= sessoes[3].horario %> Hrs</p>
                 </div>
                 <div>
                   <a href="#" class="btn">Juntar-se</a>
-                  <p>00/00</p>
+                  <p>Data <%= sessoes[3].data %></p>
                 </div>
               </div>
 
               <div class="session">
                 <div>
-                  <p>Filme</p>
-                  <p>00:00</p>
+                  <p><%= sessoes[0].nome %></p>
+                  <p><%= sessoes[0].horario %> Hrs</p>
                 </div>
                 <div>
                   <a href="#" class="btn">Juntar-se</a>
-                  <p>00/00</p>
+                  <p>Data<%= sessoes[0].data %></p>
                 </div>
               </div>
             </div>

@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Filme = sequelize.define('Filme',{
+    const Filme = sequelize.define('filme',{
         id:{
             type:DataTypes.INTEGER,
             primaryKey:true,
@@ -11,10 +11,6 @@ module.exports = (sequelize, DataTypes) => {
         }, 
         descricao:{
             type:DataTypes.STRING,
-            allowNull:false
-        },
-        duracao:{
-            type:DataTypes.DATE,
             allowNull:false
         },
         avaliacao:{
@@ -29,8 +25,8 @@ module.exports = (sequelize, DataTypes) => {
             type:DataTypes.STRING,
             allowNull:false
         },
-        genero_id: {
-             type: DataTypes.INTEGER,
+        genero: {
+             type: DataTypes.STRING,
              allowNull: true
 }
     },{
@@ -38,20 +34,6 @@ module.exports = (sequelize, DataTypes) => {
         timestamps:false
     })
 
-    Filme.associate = (models) => {
-    
-        Filme.hasMany(models.Sessao, {
-        foreignKey:"sessao_id",
-        as: "sessoes"
-    }),
-    Filme.hasMany(models.Ator, {
-        foreignKey:"ator_id",
-        as: "Atores"
-    }),
-    Filme.hasMany(models.Genero, {
-        foreignKey:"genero_id",
-        as: "generos"
-    })
-} 
     return Filme
-}
+} 
+

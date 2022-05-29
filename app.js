@@ -1,29 +1,49 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 const session = require('express-session')
 const logMiddleware = require('./middlewares/logSite')
 const bodyParser = require('body-parser')
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var suporteRouter = require('./routes/suporte');
-var moviesRouter = require('./routes/movies');
-var sobrenosRouter = require('./routes/sobrenos');
-var cadastroRouter = require('./routes/cadastroRouter')
-var resultadoFilmeRouter = require('./routes/resultadoFilme')
-var homeForum = require('./routes/homeForum')
-var criarSessao = require('./routes/criarSessao')
-var perfil = require ('./routes/perfil')
-var perfilUsuario = require('./routes/perfilUsuario')
-var resultadoBusca = require('./routes/resultadoBusca')
-var login = require ('./routes/login')
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const suporteRouter = require('./routes/suporte');
+const moviesRouter = require('./routes/movies');
+const sobrenosRouter = require('./routes/sobrenos');
+const cadastroRouter = require('./routes/cadastroRouter')
+const resultadoFilmeRouter = require('./routes/resultadoFilme')
+const homeForum = require('./routes/homeForum')
+const criarSessao = require('./routes/criarSessao')
+const perfil = require ('./routes/perfil')
+const perfilUsuario = require('./routes/perfilUsuario')
+const resultadoBusca = require('./routes/resultadoBusca')
+const login = require ('./routes/login')
+const editarPerfil = require('./routes/editarPerfilRouter')
+const chamadasSuporte = require('./routes/chamadasSuporte')
+const sessaoCriada = require ('./routes/sessaoCriadaRouter')
+
+const app = express();
+
+// body-parser config
+
+app.use(bodyParser.urlencoded({ extended : false}))
+
+app.use(bodyParser.json())
 
 
+// habilitando sessions
 
-var app = express();
+
+app.use(session({
+	secret: 'filmatch',
+
+	resave: false,
+
+	saveUninitialized: true, 
+
+}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -50,26 +70,9 @@ app.use('/perfil' , perfil)
 app.use('/perfilusuario', perfilUsuario)
 app.use('/resultadobusca', resultadoBusca)
 app.use('/login', login)
-
-
-// body-parser config
-
-app.use(bodyParser.urlencoded({ extended : false}))
-
-app.use(bodyParser.json())
-
-
-// habilitando sessions
-
-
-app.use(session({
-	secret: 'filmatch',
-
-	resave: false,
-
-	saveUninitialized: true, 
-
-}));
+app.use('/editarperfil' , editarPerfil)
+app.use('/chamadassuporte', chamadasSuporte)
+app.use('/sessaocriada' , sessaoCriada)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
