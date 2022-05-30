@@ -2,6 +2,7 @@ const models = require('../database/models/index')
 
 const filmesController = {
     movies: async (req,res,) =>{
+
     
     const sessoes = await  models.sessoes.findAll()
 

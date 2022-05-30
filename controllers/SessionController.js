@@ -18,6 +18,15 @@ const SessionController = {
      
         res.render('sessaocriada' ,{ sessoes, filmeID, usuario:req.session.usuario})
         
+    },
+    findOne: async (req,res,) =>{
+        let findSession = await models.sessoes.findOne({
+            order: [ [ 'id', 'DESC' ]],
+            })
+
+            console.log(findSession)
+
+        return res.render('sucessosessao', {findSession})
     }
 }
 

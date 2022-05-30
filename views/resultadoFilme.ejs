@@ -5,16 +5,12 @@
   <main class="main__resultado">
       <div class="poster__resultado">
         <img
-          src= "" width="285px" height="352px"
+          src= "<%= filmes[filmeID].poster %>" width="285px" height="400px"
           alt=""
         />
         <div >
           <p><strong><%= filmes[filmeID].nome %> </strong></p>
         </div>
-        <img
-          src="/images/imagens-resultado-filmes/avaliacao-4.5.svg"
-          alt="avaliacao 4.5"
-        />
       </div>
       <div>
        <div class="sinopse__principal">
@@ -42,48 +38,30 @@
       <div class="linha__vertical"></div>
     <section class="forum__resultado" >
       <p>
-        <strong>Ultimas atividades no Fórum sobre: <%= filmes[filmeID].nome %></strong>
+        <strong>Avaliaçoes da critica sobre : <%= filmes[filmeID].nome %></strong>
       </p>
       <div class="atividades__forum" >
-        <img
-        class="user__forum"
-          src="/images/imagens-resultado-filmes/imagemUserForum.svg"
-          alt=""
-        />
         <div class="titulo__topico">
-          <p class="nome__forum">Titulo do tópico</p>
-          <p class="nome__forum">Nome do fórum que se encontra o tópico</p>
+       <strong><p class="nome__forum"> <%= filmes[filmeID].autorCritica1 %></p></strong>
           <p class="conteudo__forum">
-            Mussum Ipsum, cacilds vidis litro abertis. Si num tem leite então bota
-            uma pinga aí cumpadi! Praesent vel viverra nisi. Mauris aliquet nunc
-            non turpis scelerisque, eget...
+            <%= filmes[filmeID].critica1 %>
           </p>
         </div>
       </div>
       <div class="horario__forum">
-        <p>27/11/2021 | 12:12</p>
-        <button class="botao__forum" >Ver mais</button>
+        <a href="<%=filmes[filmeID].linkcritica1%> " target="_blank"><button class="botao__forum" >Ver mais</button></a>
       </div>
       <div class="linha__horizontal"></div>
       <div class="atividades__forum" >
-        <img
-        class="user__forum"
-          src="/images/imagens-resultado-filmes/imagemUserForum.svg"
-          alt=""
-        />
         <div class="titulo__topico">
-          <p class="nome__forum">Titulo do tópico</p>
-          <p class="nome__forum">Nome do fórum que se encontra o tópico</p>
+          <strong><p class="nome__forum"><%= filmes[filmeID].autorCritica2 %></p></strong>
           <p class="conteudo__forum">
-            Mussum Ipsum, cacilds vidis litro abertis. Si num tem leite então bota
-            uma pinga aí cumpadi! Praesent vel viverra nisi. Mauris aliquet nunc
-            non turpis scelerisque, eget...
+            <%= filmes[filmeID].critica2 %>
           </p>
         </div>
       </div>
       <div class="horario__forum">
-        <p>27/11/2021 | 12:12</p>
-        <button class="botao__forum" >Ver mais</button>
+        <a href="<%=filmes[filmeID].linkcritica2%> " target="_blank"><button class="botao__forum" >Ver mais</button></a>
       </div>
       <div class="linha__horizontal"></div>
     </section>

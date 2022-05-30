@@ -19,7 +19,7 @@ const CriarSessaoController = {
 
         let sessao = await models.sessoes.create({nome, descricao, data, horario, link})
 
-        return res.redirect('/login')
+        return res.redirect('/sucessosessao')
     }
 }
 

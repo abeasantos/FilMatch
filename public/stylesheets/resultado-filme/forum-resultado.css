@@ -1,4 +1,6 @@
 .forum__resultado{
+    align-items: center;
+    align-content: center;
     background: rgba(196, 196, 196, 0.1);
     border-radius: 5px;
     display: flex;

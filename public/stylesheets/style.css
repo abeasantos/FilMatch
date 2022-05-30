@@ -274,6 +274,22 @@ footer {
   margin: auto;
 }
 
+.btn__juntar{
+  background-color: #8E0E00;
+  width: 7rem;
+  height: 3rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.btn__juntar:hover{
+  background-color: var(--white-light);
+  color: var(--main-light);
+  opacity: 0.8;
+}
 /* Form Suporte */
 
 .formCont {

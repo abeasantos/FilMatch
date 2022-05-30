@@ -23,6 +23,7 @@ const login = require ('./routes/login')
 const editarPerfil = require('./routes/editarPerfilRouter')
 const chamadasSuporte = require('./routes/chamadasSuporte')
 const sessaoCriada = require ('./routes/sessaoCriadaRouter')
+const sucessoSessao = require ('./routes/sucessoSessao')
 
 const app = express();
 
@@ -73,6 +74,7 @@ app.use('/login', login)
 app.use('/editarperfil' , editarPerfil)
 app.use('/chamadassuporte', chamadasSuporte)
 app.use('/sessaocriada' , sessaoCriada)
+app.use('/sucessosessao', sucessoSessao)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
