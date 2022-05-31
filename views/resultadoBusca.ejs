@@ -2,22 +2,125 @@
 
 <body>
     <%-include('./partials/header')%>
-    <main class="main_tudo">
-        <div class="main__resultado__busca">
-            <div>
-                <p>Resultado da busca <strong>"Quentin Tarantino"</strong></p>
-                <p>5 resultados encontrados</p>
-            </div>
-            <div class="poster__Django">
+    <main> 
+        <div class="resultado-de-busca">
+            <a href="#"><i class="fas fa-angle-double-left"></i> Voltar a home</a>
+            <p>Resultado da Busca "Quentin Tarantino"</p>
+            <p>5 Resultados Encontrados</p>
+        </div>
+        
+        <div class="busca">
             
-                <div class="titulo__poster">
+            <div class="posters">
+                
+                <div class="filme__busca" >
+                    <div class="img-poster">
+                        <img src="/images/imagens-resultado-busca/Django.svg" alt="">
+
+                    </div>
+                <div class="info-poster">
                     <p>Django</p>
                     <p>Quentin Tarantino</p>
-                    <p>2012 - ação</p>
-                    <p>2h-45m</p>
-                    <button class="botao__seila">Ver mais</button>
+                    <p> 2012 - Faroeste/Ação</p>
+                    <p> 2h 45m</p>
+                    <button class="btn">Ver mais</button>
+                    </div>    
+                </div>
+
+            <div class="filme__busca">
+                <div class="img-poster">
+                    <img src="/images/imagens-resultado-busca/Era uma vez... Em Hollywood.svg" alt="">
+
+                </div>
+                <div class="info-poster">
+                    <p>Era uma Vez... Em Hollywood</p>
+                    <p>Quentin Tarantino</p>
+                    <p> 2019 - Drama/Comédia</p>
+                    <p> 2h 51m</p>
+                    <button class="btn">Ver mais</button>
                 </div>
             </div>
+            
+            <div class="filme__busca">
+                <div class="img-poster">
+                    <img src="/images/imagens-resultado-busca/Pulp Fiction.svg" alt="">
+
+                </div>
+                    <div class="info-poster">
+                        <p>Pulp Fiction</p>
+                        <p>Quentin Tarantino</p>
+                        <p> 1994 - Crime/Drama</p>
+                        <p> 2h 34m</p>
+                        <button class="btn">Ver mais</button>
+                    </div>
+                </div>
+
+                <div class="filme__busca">
+                    <div class="img-poster">
+                        <img src="/images/imagens-resultado-busca/Kill Bill.svg" alt="">
+
+                    </div>
+                    <div class="info-poster">
+                        <p>Kill Bill - Volume 1</p>
+                        <p>Quentin Tarantino</p>
+                        <p> 2003 - Ação/Crime</p>
+                        <p> 1h 51m</p>
+                        <button class="btn">Ver mais</button>
+                    </div>
+                </div>
+            </div>
+            
+            <section>
+                <div class="section_title">
+                  <h2>
+                    Próximas sessões
+                    <img
+                      src="/images/icons/calendar.svg"
+                      alt="Imagem de calendário"
+                      class="img_title"
+                    />
+                  </h2>
+                </div>
+                <div class="container">
+                  <div class="next_session">
+                      <div class="session">
+                        <div>
+                          <p> sessoes[1].nome  </p>
+                          <p> sessoes[1].horario Hrs</p>
+                        </div>
+                        <div>
+                          <a href="#" class="btn__juntar">Juntar-se</a>
+                          <p> Data sessoes[1].data </p>
+                        </div>
+                      </div>
+                      <div class="session">
+                        <div>
+                          <p> sessoes[2].nome </p>
+                          <p> sessoes[2].horario  Hrs</p>
+                        </div>
+                        <div>
+                          <a href="#" class="btn__juntar">Juntar-se</a>
+                          <p>Data  sessoes[2].data </p>
+                        </div>
+                      </div>
+                      <div class="session">
+                        <div>
+                          <p> sessoes[3].nome </p>
+                          <p> sessoes[3].horario  Hrs</p>
+                        </div>
+                        <div>
+                          <a href="#" class="btn__juntar">Juntar-se</a>
+                          <p>Data  sessoes[3].data </p>
+                        </div>
+                      </div>
+                      <div class="session">
+                    
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
         </div>
     </main>
     <%-include('./partials/footer')%>
