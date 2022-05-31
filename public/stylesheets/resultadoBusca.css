@@ -1,38 +1,61 @@
-.main_tudo{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-.poster__Django{
-    display: flex;
-}
-
-.main__resultado__busca{
+.busca{
+    width: 100%;
     background: rgba(196, 196, 196, 0.1);
-    width: 97.75rem;
+    border-radius: 0.3rem;
+    display: flex;
+    font-size: 1.5rem;
     height: 55rem;
+    line-height: 1.9rem;
+    padding: 3rem;
+    
 }
 
-.titulo__poster{
-    margin-left: 1.5rem ;
+
+.posters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 70%;
+    border-right: 1px solid grey;
 }
 
-.botao__seila{
-    width: 6.1875rem;
-    height: 2.0625rem;
-    background-color: #8E0E00;
-    color: #f5f4f3;
-    border-radius: 5px;
-    border: none;
-    font-family: 'poppins';
+.filme__busca{
+    width: 50%;
+    height: 300px;
+    display: flex;
+    gap: .625rem;
 }
 
-.botao__seila:hover{
-    background-color: var(--white-light);
-    color: var(--main-light);
-    opacity: 0.8;
-    transition: 0.5s;
+.img-poster img{
+    width: 150px;
 }
+
+.info-poster{
+    font-size: 12px;
+}
+
+ 
+ main{
+     padding: 10px 10%;
+ }
+
+ .busca{
+     display: flex;
+ }
+
+ .section_title{
+     margin-left: 30px;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .next_session{
+     display: flex;
+     flex-direction: column;
+ }
+
+ .session{
+     margin-bottom: 30px;
+ }
 
 
