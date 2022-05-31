@@ -14,26 +14,35 @@
         </div>
       </section>
       <section class="formulario__cadastro">
-        <form>
+        <% if(typeof(errors) != 'undefined'){ %>
+          <p>ERROR</p>
+          <ul>
+            <% errors.forEach((error) =>{ %>
+              <li><%= error.msg %></li>
+           <% }) %>
+          </ul>
+        <% } %>
+        <form class="form-cadastro" action="/users/criar" method="POST">
           <div class="cadastro">
             <strong><p>Cadastro</p></strong>
-            <p>Ja possui conta? <strong><a href="#" style='text-decoration: none' >Clique aqui</a></strong></p>
-            <p class="form">Nome</p>
+            <p>Ja possui conta? <strong><a href="/login" style='text-decoration: none' >Clique aqui</a></strong></p>
+            <label for="nome">Nome</label>
             <input class="input__cadastro" type="text" name="nome" id="nome">
-            <p>Email</p>
+            <label for="email">Email</label>
             <input class="input__cadastro" type="email" name="email" id="email">
-            <p>Senha</p>
+            <label for="senha">Senha</label>
             <input class="input__cadastro" type="password" name="senha" id="senha">
-            <p>Confirme Sua Senha</p>
+            <label for="confirmarSenha">Confirme Sua Senha</label>
             <input class="input__cadastro" type="password" name="confirmarSenha" id="confirmarSenha">
-            <label for="dataDeNascimento"><p>Data De Nascimento</p></label>
+            <label for="dataDeNascimento">Data De Nascimento</label>
             <input class="input__nascimento" type="date" name="dataDeNascimento" id="dataDeNascimento">
-            <label for="gerero"><p>Gênero</p></label>
-            <select class="select__genero">
+            <label for="gerero">Gênero</label>
+            <select class="select__genero" name="genero">
               <option selected disabled value="">Selecione</option>
                   <option>Cisgênero</option>
                   <option>Transgênero</option>
                   <option>Não-binário</option>
+                  <option>Prefiro não informar</option>
             </select>
           <p >Ao clicar em “Criar Conta”, eu aceito que li e aceitei os <strong><a  href="#">Termos de Uso e Políticas de Privacidade</a></strong>.</p>
           <div class="buttom_cadastro">

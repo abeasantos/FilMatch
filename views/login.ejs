@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %>
+
+  <body>
+    <%- include('./partials/header') %>
+    <main class="mainLogin">
+        <form class="formLogin" action="">
+            <h2 class="login">Login</h2>
+            <p>Esqueceu sua senha ou login? Clique <a href="">aqui</a>.</p>
+            <label class="labelClass" for="nome">Nome/Usuario</label>
+            <input class="inputLogin" type="text">
+            <label class="labelClass" for="senha">Senha</label>
+            <input class="inputLogin" type="password">
+            <button class="botaoLogin">Login</button>
+            <p>Não tem uma conta?<a href="/">Crie uma aqui.</a></p>
+        </form>
+    </main>
+    <%- include('./partials/footer') %>
+  </body>
+</html>
