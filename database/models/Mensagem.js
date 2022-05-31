@@ -24,12 +24,12 @@ module.exports = (sequelize, DataTypes) => {
     Mensagem.associate = (models) => {
         Mensagem.belongsTo(models.Usuario, {
           foreignKey: "usuario_id",
-          as: "usuario"
+          as: "usuario" 
         }),
         Mensagem.belongsTo(models.Topico,{
             foreignKey:"topico_id",
             as:"topico"
-        }) 
+        })
 }
     return Mensagem
 }

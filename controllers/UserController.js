@@ -15,10 +15,13 @@ let UserController = {
             let {nome, email, senha, dataDeNascimento, genero} = req.body
             let senhaC = bcrypt.hashSync(senha, 10)
             let usuario = await Usuario.create({nome,email,senha:senhaC,nasc:dataDeNascimento,genero})
+            console.log(req.body)
+            
             return res.redirect('/login')
+            
         }
         else{
-            res.render('paginaCadastro', {errors:listaDeErrors.errors})
+            res.render('paginaCadastro', {errors:listaDeErrors.mapped(), old:req.body})
         }
     }
 }

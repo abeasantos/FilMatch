@@ -52,15 +52,15 @@ module.exports = (sequelize, DataTypes) => {
         Usuario.hasMany(models.Suporte, {
           foreignKey: "suporte_id",
           as: "suportes"
-        }),
-        Usuario.hasMany(models.Sessao, {
-            foreignKey: "sessao_id",
-            as: "sessoes"
-        }),
+        });
+        // Usuario.hasMany(models.Sessao, {
+        //     foreignKey: "sessao_id",
+        //     as: "sessoes"
+        // }),
         Usuario.hasMany(models.Mensagem, {
             foreignKey: "mensagem_id",
             as: "mensagens"
-        }),
+        });
         Usuario.hasMany(models.Topico, {
             foreignKey: "topicos_id",
             as: "topicos"

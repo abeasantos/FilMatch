@@ -27,8 +27,8 @@ module.exports = (sequelize, DataTypes) => {
             as: "usuario"
         }),
     Topico.hasMany(models.Mensagem, {
-        foreignKey:"topico_id",
-        as: "mensagens"
+        foreignKey:"mensagem_id",
+        as: "mensagens" 
     })
 } 
     return Topico
