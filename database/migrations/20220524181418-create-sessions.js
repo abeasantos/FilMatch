@@ -7,20 +7,22 @@ module.exports = {
         allowNull: false,
         primaryKey: true
       },
-      dataHorario: {
-        type:Sequelize.DATE,
+      nome: {
+        type:Sequelize.STRING(60),
         allowNull: false
       },
-      filmes_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-            model: "filmes",
-            key: "id"
-        },
-        onUpdate: "cascade",
-        onDelete: "cascade"
-    }
+      data: {
+        type:Sequelize.STRING(20),
+        allowNull: false
+      },
+      horario:{
+        type:Sequelize.STRING(20),
+        allowNull: false
+      },
+      link: {
+        type:Sequelize.STRING(100),
+        allowNull: false
+      }
     })
   },
   down:  (queryInterface, Sequelize) => {

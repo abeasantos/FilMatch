@@ -1,7 +1,5 @@
-const Usuario = require("./Usuario")
-
 module.exports = (sequelize, DataTypes) => {
-    const Sessao = sequelize.define('Sessao',{
+    const Sessao = sequelize.define('sessoes',{
         id:{
             type:DataTypes.INTEGER,
             primaryKey:true,
@@ -12,24 +10,30 @@ module.exports = (sequelize, DataTypes) => {
             allowNull:false
         }, 
         horario:{
-            type:DataTypes.DATE,
+            type:DataTypes.TIME,
+            allowNull:false
+        },
+        nome:{
+            type:DataTypes.STRING,
+            allowNull:false
+        },
+        link:{
+            type:DataTypes.STRING,
+            allowNull:false
+        },
+        descricao:{
+            type:DataTypes.STRING,
             allowNull:false
         }
     },{
-        tableName:'sessao',
+        tableName:'sessoes',
         timestamps:false
     })
-
-    Sessao.associate = (models) => {
-        Sessao.belongsTo(models.Filme, {
-          foreignKey: "filme_id",
-          as: "filme"
-        }) 
 
     // Sessao.belongsToMany(models.Usuario, {
     //     foreignKey:"usuario_id",
     //     as: "usuarios"
     // })
-}
+
     return Sessao
 }

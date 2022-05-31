@@ -18,27 +18,7 @@ module.exports = {
       data: {
         type: Sequelize.DATE,
         allowNull: false
-      },
-      usuario_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-            model: "usuario",
-            key: "id"
-        },
-        onUpdate: "cascade",
-        onDelete: "cascade"
-    },
-      topico_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-            model: "topicos",
-            key: "id"
-        },
-        onUpdate: "cascade",
-        onDelete: "cascade"
-    }
+      }
       })
   },
   down:  (queryInterface, Sequelize) => {

@@ -1,9 +1,9 @@
 .main__painel__usuario{
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
     align-items: center;
     display: flex;
-    height: 87vh;
     justify-content: center;
-    width: 100vw;
 }
 
 @media screen and (max-width: 480px){

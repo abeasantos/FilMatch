@@ -12,12 +12,10 @@
 }
 
 .input__cadastro {
-  background-color: #484848cc;
   width: 29rem;
   height: 1.7rem;
   border: none;
   border-radius: 5px;
-  color: white;
   margin-bottom: 2.5rem;
 }
 

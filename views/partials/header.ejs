@@ -7,7 +7,16 @@
       <li><a href="/movies">Sessões</a></li>
       <li><a href="/homeforum">Fórum</a></li>
       <li><a href="/suporte">Contato</a></li>
+      <form action="">
+        <input type="text">
+        <button class="pesquisa_header">Pesquisar</button>
+      </form>
     </ul>
-  </nav>
+  </nav> 
+  <%  if(typeof usuario === 'undefined'){  %>
   <a class="btn" href="/login">Login</a>
+
+  <% } else {  %>
+     <h2> <a href="/perfil"> Olá <%= usuario.nome %></a></h2>
+    <% }%>
 </header>

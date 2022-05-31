@@ -5,88 +5,63 @@
   <main class="main__resultado">
       <div class="poster__resultado">
         <img
-          src="/images/imagens-resultado-filmes/posterArcane.svg"
-          alt="poster arcane"
+          src= "<%= filmes[filmeID].poster %>" width="285px" height="400px"
+          alt=""
         />
         <div >
-          <p><strong>Arcane</strong></p>
+          <p><strong><%= filmes[filmeID].nome %> </strong></p>
         </div>
-        <img
-          src="/images/imagens-resultado-filmes/avaliacao-4.5.svg"
-          alt="avaliacao 4.5"
-        />
       </div>
       <div>
        <div class="sinopse__principal">
         <div class="sinopse">
           <p ><strong >Sinopse</strong></p>
           <p>
-            Em meio ao conflito entre as cidades-gêmeas de Piltover e Zaun, duas
-            irmãs lutam em lados opostos de uma guerra entre tecnologias mágicas
-            e convicções incompatíveis.
+            <%= filmes[filmeID].descricao  %> 
           </p>
             <p>Disponível em:</p>
-            <img src="/images/imagens-resultado-filmes/netflix 1.svg" alt=""></div>
-        <p class="info__filme">2021 • Fantasia Científica • 1 Temporada</p>
+            <p> <%= filmes[filmeID].streaming  %> </p>
+        </div>
+        <p class="info__filme"> Genero : <%= filmes[filmeID].genero %>  </p>
         <div class="proximas__sessoes">
-          <p class="horario__sessoes"><strong>Próximas sessões de “Arcane”</strong></p>
+          <p class="horario__sessoes"><strong>Próxima sessão de <%= filmes[filmeID].nome %> </strong></p>
           <div class="proxima__sessao" >
-            <p>Arcane</p>
-            <p>00:00 00/00</p>
+            <p><%= filmes[filmeID].nome %></p>
+            <p><%= sessoes[filmeID].data %></p>
+            <p><%= sessoes[filmeID].horario %></p>
           </div>
-          <div class="proxima__sessao" >
-            <p>Arcane</p>
-            <p>00:00 00/00</p>
-          </div>
-          <button class="botao__sessoes">Criar uma nova sessão</button>
+
+          <a href="/criarSessao"><button class="botao__sessoes">Criar uma nova sessão</button></a>
         </div>
        </div>
       </div>
       <div class="linha__vertical"></div>
     <section class="forum__resultado" >
       <p>
-        <strong>Ultimas atividades no Fórum sobre: “Arcane”</strong>
+        <strong>Avaliaçoes da critica sobre : <%= filmes[filmeID].nome %></strong>
       </p>
       <div class="atividades__forum" >
-        <img
-        class="user__forum"
-          src="/images/imagens-resultado-filmes/imagemUserForum.svg"
-          alt=""
-        />
         <div class="titulo__topico">
-          <p class="nome__forum">Titulo do tópico</p>
-          <p class="nome__forum">Nome do fórum que se encontra o tópico</p>
+       <strong><p class="nome__forum"> <%= filmes[filmeID].autorCritica1 %></p></strong>
           <p class="conteudo__forum">
-            Mussum Ipsum, cacilds vidis litro abertis. Si num tem leite então bota
-            uma pinga aí cumpadi! Praesent vel viverra nisi. Mauris aliquet nunc
-            non turpis scelerisque, eget...
+            <%= filmes[filmeID].critica1 %>
           </p>
         </div>
       </div>
       <div class="horario__forum">
-        <p>27/11/2021 | 12:12</p>
-        <button class="botao__forum" >Ver mais</button>
+        <a href="<%=filmes[filmeID].linkcritica1%> " target="_blank"><button class="botao__forum" >Ver mais</button></a>
       </div>
       <div class="linha__horizontal"></div>
       <div class="atividades__forum" >
-        <img
-        class="user__forum"
-          src="/images/imagens-resultado-filmes/imagemUserForum.svg"
-          alt=""
-        />
         <div class="titulo__topico">
-          <p class="nome__forum">Titulo do tópico</p>
-          <p class="nome__forum">Nome do fórum que se encontra o tópico</p>
+          <strong><p class="nome__forum"><%= filmes[filmeID].autorCritica2 %></p></strong>
           <p class="conteudo__forum">
-            Mussum Ipsum, cacilds vidis litro abertis. Si num tem leite então bota
-            uma pinga aí cumpadi! Praesent vel viverra nisi. Mauris aliquet nunc
-            non turpis scelerisque, eget...
+            <%= filmes[filmeID].critica2 %>
           </p>
         </div>
       </div>
       <div class="horario__forum">
-        <p>27/11/2021 | 12:12</p>
-        <button class="botao__forum" >Ver mais</button>
+        <a href="<%=filmes[filmeID].linkcritica2%> " target="_blank"><button class="botao__forum" >Ver mais</button></a>
       </div>
       <div class="linha__horizontal"></div>
     </section>

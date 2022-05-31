@@ -18,16 +18,23 @@
         </div>
         <div class="conteudo__perfil">
             <div class="sobreMim__Perfil">
-                <p>Sobre mim</p>
-                <input class="input__sobre" type="text">
+              <% if(typeof usuario == usuario){ %>
+                <% } else {  %>
+                   <h4> Interesses e hobbies</h4>
+                    <p></p>
+                  <% }%>
                 <p>Ocupação</p>
                 <input class="input__ocupacao" type="text">
                 <p>Interesses e Hobbies</p>
                 <input class="input__interesses" type="text">
                 <p>Filme Favorito</p>
                 <input class="input__filme" type="text">
-                <p>Aniversário</p>
-                <input class="input__aniversario" type="date">
+                <%  if(typeof usuario == usuario){  %>
+                  <% } else {  %>
+                     <h4> Aniversário</h4>
+                      <p><%= usuario.nasc.slice(0, 10).split('-').reverse().join('/')%></p>
+                    <% }%>
+                <button class="alterar__perfil"><a href="/perfilusuario">Alterar perfil</a></button>
             </div>
             <div class="atividades__recentes">
                 <div class="atividades__forum__perfil">
@@ -73,7 +80,9 @@
                     <p>27/11/2021 | 12:12</p>
                     <button class="botao__forum" >Ver mais</button>
                   </div>
+                  
             </div>
+            
         </div>
     </div>
     </main>

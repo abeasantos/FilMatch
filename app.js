@@ -1,24 +1,13 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 const session = require('express-session')
 const logMiddleware = require('./middlewares/logSite')
 const bodyParser = require('body-parser')
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var suporteRouter = require('./routes/suporte');
-var moviesRouter = require('./routes/movies');
-var sobreNosRouter = require('./routes/sobreNos');
-var cadastroRouter = require('./routes/cadastroRouter')
-var resultadoFilmeRouter = require('./routes/resultadoFilme')
-var homeForum = require('./routes/homeForum')
-var criarSessao = require('./routes/criarSessao')
-var perfil = require ('./routes/perfil')
-var perfilUsuario = require('./routes/perfilUsuario')
-var app = express();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -43,6 +32,7 @@ app.use('/movies', moviesRouter);
 app.use('/sobrenos', sobreNosRouter);
 app.use('/perfil' , perfil)
 app.use('/perfilusuario', perfilUsuario)
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
